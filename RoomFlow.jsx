@@ -261,9 +261,6 @@ export default function RoomFlow() {
 
   // 모바일 뷰 여부 (간단한 브레이크포인트)
   const [isMobile, setIsMobile] = useState(false);
-  
-  // 서버 기동 안내 표시 여부 (처음 로드시에만 표시)
-  const [showServerNotice, setShowServerNotice] = useState(true);
 
   // ===== 공통 유틸 =====
   const getPlayerTypeLabel = (type) => {
@@ -377,8 +374,6 @@ export default function RoomFlow() {
         return;
       }
       setRooms(data);
-      // 방 목록을 성공적으로 불러왔으면 서버 안내 박스 숨김
-      setShowServerNotice(false);
     } catch (e) {
       console.error(e);
       alert("방 목록을 불러오는 데 실패했습니다.");
@@ -1473,30 +1468,28 @@ export default function RoomFlow() {
             </div>
           </div>
 
-          {/* 서버 안내문 - 방 목록 로드 전에만 표시 */}
-          {showServerNotice && (
-            <div
-              style={{
-                maxWidth: "400px",
-                margin: "16px auto 0",
-                padding: "12px",
-                borderRadius: "8px",
-                backgroundColor: "#fffbeb",
-                border: "1px solid #fcd34d",
-                fontSize: "13px",
-                color: "#92400e",
-              }}
-            >
-              <p style={{ margin: "0 0 8px 0", fontWeight: 600 }}>
-                {language === "ko" ? "⏱️ 서버 기동 안내" : "⏱️ サーバー起動のご案内"}
-              </p>
-              <p style={{ margin: 0, lineHeight: "1.5" }}>
-                {language === "ko"
-                  ? "처음 접속 시 서버 기동에 30초~1분 정도 소요될 수 있습니다. 국적 선택 버튼을 누른 후 잠시 기다려주세요."
-                  : "初回接続時、サーバー起動に30秒～1分程度かかる場合があります。国籍選択ボタンを押した後、しばらくお待ちください。"}
-              </p>
-            </div>
-          )}
+          {/* 서버 안내문 */}
+          <div
+            style={{
+              maxWidth: "400px",
+              margin: "16px auto 0",
+              padding: "12px",
+              borderRadius: "8px",
+              backgroundColor: "#fffbeb",
+              border: "1px solid #fcd34d",
+              fontSize: "13px",
+              color: "#92400e",
+            }}
+          >
+            <p style={{ margin: "0 0 8px 0", fontWeight: 600 }}>
+              {language === "ko" ? "⏱️ 서버 기동 안내" : "⏱️ サーバー起動のご案内"}
+            </p>
+            <p style={{ margin: 0, lineHeight: "1.5" }}>
+              {language === "ko"
+                ? "처음 접속 시 서버 기동에 30초~1분 정도 소요될 수 있습니다. 국적 선택 버튼을 누른 후 잠시 기다려주세요."
+                : "初回接続時、サーバー起動に30秒～1分程度かかる場合があります。国籍選択ボタンを押した後、しばらくお待ちください。"}
+            </p>
+          </div>
         </div>
       </div>
     );

@@ -1,0 +1,25 @@
+# 1. gh-pages 브랜치를 별도 디렉토리에 연결
+git worktree add C:\wordchain\gh-pages gh-pages
+
+# 2. 빌드 실행 (main 브랜치에서)
+npm run build
+
+# 3. 빌드 결과물을 gh-pages 디렉토리로 복사
+Copy-Item -Path C:\wordchain\dist\* -Destination C:\wordchain\gh-pages\ -Recurse -Force
+
+# 4. gh-pages 디렉토리로 이동
+cd C:\wordchain\gh-pages
+
+# 5. 변경사항 커밋 & 푸시
+git add .
+git commit -m "Deploy new build"
+git push origin gh-pages
+
+
+
+
+@@이후 실행은.
+
+npm run build
+Copy-Item -Path C:\wordchain\dist\* -Destination C:\wordchain\gh-pages\ -Recurse -Force
+cd C:\wordchain\gh-pages; git add .; git commit -m "Deploy new build"; git push origin gh-pages
