@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# backup files
+*.zip
+*복사본*
+*backup*
