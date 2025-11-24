@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+input {
+  padding: 8px;
+  font-size: 16px;
+}
+button {
+  padding: 8px 12px;
+  margin-left: 8px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 5px 0;
+}
+/* 모든 버튼 공통 애니메이션 */
+button {
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+}
+
+/* 마우스 올라갔을 때 (hover) */
+button:hover {
+  transform: translateY(-1px) scale(1.04);  /* 살짝 위로 + 확대 */
+  box-shadow: 0 6px 12px rgba(15, 23, 42, 0.15);
+}
+
+/* 클릭하는 순간 (active) */
+button:active {
+  transform: translateY(0) scale(0.98);     /* 살짝 눌리는 느낌 */
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.1);
+}
