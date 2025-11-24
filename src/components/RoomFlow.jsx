@@ -1956,6 +1956,33 @@ export default function RoomFlow() {
                   </div>
                 </div>
 
+                {/* 턴 */}
+                <div
+                  style={{
+                    padding: "8px",
+                    borderRadius: "8px",
+                    backgroundColor: "#f9fafb",
+                    border: "1px solid #e5e7eb",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "12px",
+                      color: "#6b7280",
+                    }}
+                  >
+                    {T.turn}
+                  </div>
+                  <div
+                    style={{
+                      fontWeight: 600,
+                      marginTop: "4px",
+                    }}
+                  >
+                    {isMyTurn ? T.myTurn : T.oppTurn}
+                  </div>
+                </div>
+
                 {/* 내 시간 */}
                 <div
                   style={{
@@ -2011,33 +2038,6 @@ export default function RoomFlow() {
                   >
                     {oppTime != null ? oppTime : "-"}
                     {timerUnit}
-                  </div>
-                </div>
-
-                {/* 턴 */}
-                <div
-                  style={{
-                    padding: "8px",
-                    borderRadius: "8px",
-                    backgroundColor: "#f9fafb",
-                    border: "1px solid #e5e7eb",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: "12px",
-                      color: "#6b7280",
-                    }}
-                  >
-                    {T.turn}
-                  </div>
-                  <div
-                    style={{
-                      fontWeight: 600,
-                      marginTop: "4px",
-                    }}
-                  >
-                    {isMyTurn ? T.myTurn : T.oppTurn}
                   </div>
                 </div>
               </div>
