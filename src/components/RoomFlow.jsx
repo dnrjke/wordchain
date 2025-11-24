@@ -10,8 +10,8 @@ const BASE_PATH = BASE_URL.endsWith('/') ? BASE_URL : BASE_URL + '/';
 // ===== 한/일 UI 텍스트 =====
 const KO_TEXT = {
   // 공통/헤더
-  uiToggleToJa: "日本語로 보기",
-  uiToggleToKo: "한국어로 보기",
+  uiToggleToJa: "🌐 日本語",
+  uiToggleToKo: "🌐 한국어",
 
   // 국적 선택 단계
   selectTitle: "국적 선택",
@@ -72,8 +72,8 @@ const KO_TEXT = {
 
 const JA_TEXT = {
   // 공통/헤더
-  uiToggleToJa: "日本語で表示",
-  uiToggleToKo: "한국어で表示",
+  uiToggleToJa: "🌐 日本語",
+  uiToggleToKo: "🌐 한국어",
 
   // 국적 선택 단계
   selectTitle: "国籍を選択",
