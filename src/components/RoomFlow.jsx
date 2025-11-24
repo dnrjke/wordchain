@@ -78,7 +78,7 @@ const JA_TEXT = {
   // 국적 선택 단계
   selectTitle: "国籍を選択",
   selectDesc: "韓国人か日本人かを選んでください。",
-  btnKorean: "韓国人",
+  btnKorean: "한국인",
   btnJapanese: "日本人",
 
   // 방 리스트 단계
